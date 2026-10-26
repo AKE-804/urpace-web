@@ -135,6 +135,32 @@ class RunlahCalendarAndVisibilityTests(unittest.TestCase):
   self.assertEqual(found[0]['date'],'2026-11-13')
   self.assertEqual(found[0]['end'],'2026-11-15')
 
+ def test_cross_month_dates_and_clean_title(self):
+  html='<a href="/th/longrace2026">24H Bangkok Championships 2026 อัลตร้ารัน · ฟันรัน 31 ต.ค. - 1 พ.ย. 2569 กรุงเทพมหานคร</a>'
+  found=parse_runlah(html,SRC['source-001'])
+  self.assertEqual(len(found),1)
+  self.assertEqual(found[0]['name'],'24H Bangkok Championships 2026')
+  self.assertEqual(found[0]['date'],'2026-10-31')
+  self.assertEqual(found[0]['end'],'2026-11-01')
+
+ def test_cleaning_existing_runlah_auto_row_not_duplicate(self):
+  event_url='https://www.runlah.com/th/longrace2026'
+  inc={'name':'24H Bangkok Championships 2026','date':'2026-10-31',
+       'end':'2026-11-01','province':'กรุงเทพมหานคร','venue':'','distances':[],
+       'type':'Ultra','url':event_url,'registration_url':'',
+       'source_name':'RUNLAH','source_id':'source-001'}
+  from sync_races import public_row
+  row=public_row(inc,'test-imported','2026-10-25')
+  row['Event / งานวิ่ง']='24H Bangkok Championships 2026 อัลตร้ารัน · ฟันรัน 31 ต.ค.'
+  row['Event start']='2026-11-01';row['First race date']='2026-11-01'
+  store={'events':[{'id':'test-imported','race':row,'categories':[],
+                    'status':'auto_unverified','provenance':[{'source_url':event_url}]}]}
+  stats,_=merge(store,[inc],'2026-10-26')
+  self.assertEqual(stats['added'],0)
+  self.assertEqual(len(store['events']),1)
+  self.assertEqual(row['Event / งานวิ่ง'],inc['name'])
+  self.assertEqual(row['Event start'],inc['date'])
+
  def test_only_future_and_ongoing_races_are_public(self):
   from sync_races import write_site
   with tempfile.TemporaryDirectory() as t:
