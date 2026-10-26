@@ -1,6 +1,6 @@
 {
-  "last_attempt": "2026-10-26T09:49:51+00:00",
-  "last_success": "2026-10-26T09:49:51+00:00",
+  "last_attempt": "2026-10-26T09:52:34+00:00",
+  "last_success": "2026-10-26T09:52:34+00:00",
   "mode": "scheduled",
   "notes": "Original 28 curated races from 2026-10-25; 67 sources registered, no live fetch completed by this release.",
   "source_count": 67,
@@ -485,10 +485,10 @@
       "note": "js_app"
     }
   ],
-  "added": 32,
-  "updated": 5,
-  "unchanged": 35,
-  "review_count": 5,
+  "added": 0,
+  "updated": 32,
+  "unchanged": 74,
+  "review_count": 1,
   "sources_with_events": 2,
   "events_parsed": 74,
   "future_events_parsed": 74,

@@ -1,48 +1,6 @@
 [
   {
     "incoming": {
-      "name": "วิ่งเลาะเวียง 4 เมืองล้านนาตะวันออก 2569 สนามที่ 3 เวียงเทิง",
-      "date": "2026-11-07",
-      "end": "2026-11-08",
-      "province": "เชียงราย",
-      "venue": "",
-      "type": "Fun Run",
-      "distances": [],
-      "url": "https://www.runlah.com/th/Sj7o6kRb",
-      "registration_url": "",
-      "source_id": "source-001",
-      "source_name": "RUNLAH",
-      "source_url": "https://www.runlah.com/th/calendar/type/funrun",
-      "note": ""
-    },
-    "possible_matches": [
-      "RQ-95a226554450"
-    ],
-    "reason": "name/date similarity - needs manual review"
-  },
-  {
-    "incoming": {
-      "name": "วิ่งเลาะเวียง 4 เมืองล้านนาตะวันออก 2569 สนามที่ 4 เวียงภูกามยาว",
-      "date": "2026-11-21",
-      "end": "2026-11-22",
-      "province": "พะเยา",
-      "venue": "",
-      "type": "Fun Run",
-      "distances": [],
-      "url": "https://www.runlah.com/th/l0Nia2AG",
-      "registration_url": "",
-      "source_id": "source-001",
-      "source_name": "RUNLAH",
-      "source_url": "https://www.runlah.com/th/calendar/type/funrun",
-      "note": ""
-    },
-    "possible_matches": [
-      "RQ-cccf475833dd"
-    ],
-    "reason": "name/date similarity - needs manual review"
-  },
-  {
-    "incoming": {
       "name": "THEP SADET TRAIL 2026",
       "date": "2026-10-31",
       "end": "2026-11-01",
@@ -61,47 +19,5 @@
       "RQ-e6bdc0c89f0d"
     ],
     "reason": "Date changed on same source URL — verify with organizer before updating"
-  },
-  {
-    "incoming": {
-      "name": "หละปูนอัลตร้ามาราธอน 2026",
-      "date": "2026-12-26",
-      "end": "2026-12-27",
-      "province": "ลำพูน",
-      "venue": "",
-      "type": "Ultra",
-      "distances": [],
-      "url": "https://www.runlah.com/th/QkW0TVz9",
-      "registration_url": "",
-      "source_id": "source-001",
-      "source_name": "RUNLAH",
-      "source_url": "https://www.runlah.com/th/calendar/type/ultra",
-      "note": ""
-    },
-    "possible_matches": [
-      "RQ-abf48fe3101d"
-    ],
-    "reason": "name/date similarity - needs manual review"
-  },
-  {
-    "incoming": {
-      "name": "Nong Prajak Ultra 100",
-      "date": "2027-02-13",
-      "end": "2027-02-14",
-      "province": "อุดรธานี",
-      "venue": "",
-      "type": "Ultra",
-      "distances": [],
-      "url": "https://www.runlah.com/th/M0kav6Bb",
-      "registration_url": "",
-      "source_id": "source-001",
-      "source_name": "RUNLAH",
-      "source_url": "https://www.runlah.com/th/calendar/type/ultra",
-      "note": ""
-    },
-    "possible_matches": [
-      "RQ-dd32ad68b24d"
-    ],
-    "reason": "name/date similarity - needs manual review"
   }
 ]
