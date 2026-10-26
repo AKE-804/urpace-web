@@ -1,0 +1,80 @@
+name: UR.PACE Race Sync and Pages Deploy
+
+on:
+  schedule:
+    # Every Monday at 09:15 Thailand time (UTC+7); GitHub may delay scheduled runs.
+    - cron: '15 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: urpace-sync-and-pages
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run automated tests
+        run: python -m unittest discover -s tests -v
+      - name: Sync race data (enabled, permitted pilot sources only)
+        run: python scripts/sync_races.py
+      - name: Show data readiness summary
+        run: |
+          python - <<'PY2'
+          import json
+          with open('data/sync_status.json', encoding='utf-8') as f:
+              d = json.load(f)
+          print('Last success:', d.get('last_success'))
+          print('Beta gate:', json.dumps(d.get('beta_gate', {}), ensure_ascii=False))
+          print('Sources with events:', d.get('sources_with_events'))
+          PY2
+      - name: Commit updated snapshot
+        run: |
+          git config user.name 'UR.PACE Bot'
+          git config user.email 'urpace-bot@users.noreply.github.com'
+          git add index.html data/site_payload.json data/race_store.json data/sync_status.json data/review_queue.json
+          if git diff --cached --quiet; then
+            echo 'No data changes to commit.'
+          else
+            git commit -m 'chore: update race listings'
+            git push
+          fi
+      - name: Prepare public site
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          touch _site/.nojekyll
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
