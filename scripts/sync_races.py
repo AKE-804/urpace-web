@@ -359,7 +359,12 @@ def likely_same(existing,new):
     known_urls=[canonical_url(x.get('source_url')) for x in existing.get('provenance',[])]
     # Same published event URL can announce a reschedule. Do not duplicate, but review date changes.
     same_name_score=difflib.SequenceMatcher(None,a,b).ratio()
-    if canonical_url(new['url']) in known_urls and known_urls and same_name_score>=.85:return 'exact'
+    if canonical_url(new['url']) in known_urls and known_urls:
+        # Parser improvements can remove category chips and fix the start of a
+        # multi-day event. Reuse the existing event instead of duplicating it.
+        related=(a.startswith(b) or b.startswith(a)) and min(len(a),len(b))>=12
+        if same_name_score>=.85 or (related and (same_day or new.get('end') in old_dates)):
+            return 'exact'
     if not same_day:return 'different'
     ap=norm_province(r.get('จังหวัด'));bp=norm_province(new['province'])
     if ap and bp and ap!=bp:return 'different'
@@ -397,6 +402,27 @@ def merge(store,discovered,now):
             if old:old['last_seen']=now;stats['unchanged']+=1
             else:exact['provenance'].append(rec);stats['updated']+=1
             exact['last_seen']=now
+            # Only clean importer-owned records, never rename a curated event.
+            oldr=exact['race']
+            imported=exact.get('status')=='auto_unverified'
+            same_origin=canonical_url(new['url']) in known_urls
+            old_name=oldr.get('Event / งานวิ่ง','')
+            if imported and same_origin and norm(old_name).startswith(norm(new['name'])) and old_name!=new['name']:
+                oldr['Event / งานวิ่ง']=new['name'];stats['updated']+=1
+            # Correct an importer bug that took the last day of a short
+            # cross-month race as the starting date. Only for same-source,
+            # unverified rows, with exactly the same end date and <=4-day span.
+            try:
+                old_start=dt.date.fromisoformat(oldr.get('Event start',''))
+                new_start=dt.date.fromisoformat(new['date'])
+                new_end=dt.date.fromisoformat(new.get('end') or new['date'])
+                if (imported and same_origin and new_start<old_start and
+                    oldr.get('Event end')==new_end.isoformat() and
+                    0<(new_end-new_start).days<=4):
+                    oldr['Event start']=new['date']
+                    oldr['First race date']=new['date']
+                    stats['updated']+=1
+            except (ValueError,TypeError):pass
             old_dates={exact['race'].get('First race date'),exact['race'].get('Event start'),exact['race'].get('Event end')}
             if new['date'] not in old_dates:
                 review.append({'incoming':new,'possible_matches':[exact['id']],
