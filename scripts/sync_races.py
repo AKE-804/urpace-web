@@ -191,33 +191,62 @@ def parse_jogandjoy(html,source):
     return out
 
 
+def runlah_event_dates(text):
+    """Read date ranges first so a 13–15 Nov race starts on the 13th."""
+    raw=' '.join(str(text or '').split())
+    month_pattern=MOKEYS
+    th_range=re.search(r'\b(\d{1,2})\s*[-–]\s*(\d{1,2})\s+('+month_pattern+r')\s+(20\d\d|25\d\d)\b',raw,re.I)
+    if th_range:
+        first=parse_date(f"{th_range[1]} {th_range[3]} {th_range[4]}")
+        last=parse_date(f"{th_range[2]} {th_range[3]} {th_range[4]}")
+        if first and last and first<=last:return first,last,th_range.start(),th_range.end()
+    ordinary=TH_DATE.search(raw) or EN_DATE.search(raw) or ISO_DATE.search(raw)
+    if ordinary:
+        day=parse_date(ordinary.group(0))
+        return (day,day,ordinary.start(),ordinary.end()) if day else ('','',0,0)
+    return '','',0,0
+
+
 def parse_runlah(html,source):
-    """Conservative parser for RUNLAH event list; discard unclear dates/links."""
+    """Read public race-card links with their *own* dates, not the page-wide calendar date."""
     soup=BeautifulSoup(html,'html.parser');out=[];seen=set()
     for link in soup.find_all('a',href=True):
         url=safe_external(link['href'],source['url'])
         p=urlparse(url)
-        if p.netloc not in ('www.runlah.com','runlah.com') or not re.match(r'^/(th|en)/[a-zA-Z0-9_-]{4,45}/?$',p.path):continue
-        if re.search(r'/(calendar|location|register|events|account|event-list|login)/?',p.path):continue
-        name=link.get_text(' ',strip=True)
-        if not 6<=len(name)<=140 or name.lower() in ('รายละเอียด','สมัครเลย!','register','details'):continue
-        parent=link.parent
-        container=parent
-        # Find smallest nearby block containing this race's own date, not the entire page.
-        for _ in range(3):
-            if container is None:break
-            if parse_date(container.get_text(' ',strip=True)):break
-            container=container.parent
-        if not container or container.name in ('body','html'):continue
-        txt=container.get_text(' ',strip=True)
-        day=parse_date(txt)
-        if not day:continue
-        if not (2026<=int(day[:4])<=2031):continue
-        if canonical_url(url) in seen:continue
-        seen.add(canonical_url(url))
-        e=event(name,day,url,source,province_from(txt),desc='',race_type=classify(name,txt))
+        if p.netloc not in ('www.runlah.com','runlah.com') or not re.fullmatch(r'/(th|en)/[a-zA-Z0-9_-]{4,45}/?',p.path):continue
+        if p.path.strip('/').split('/')[-1].lower() in {'account','login','results','promote','terms','register','calendar','settings'}:continue
+        raw=' '.join(link.get_text(' ',strip=True).split())
+        day,last,at,stop=runlah_event_dates(raw)
+        context=raw
+        # Some calendar layouts put the date beside the linked event title.
+        if not day:
+            node=link.parent
+            for depth in range(4):
+                if node is None or node.name in ('html','body'):break
+                event_links=[x for x in node.find_all('a',href=True) if re.fullmatch(r'/(th|en)/[a-zA-Z0-9_-]{4,45}/?',urlparse(safe_external(x.get('href'),source['url'])).path)]
+                if len(event_links)>1:break  # never attach another race's date to this link
+                context=node.get_text(' ',strip=True)
+                day,last,at,stop=runlah_event_dates(context)
+                if day:break
+                node=node.parent
+        if not day or not (2025<=int(day[:4])<=2031):continue
+        head=link.find(['h2','h3','h4','h5','strong'])
+        title=' '.join(head.get_text(' ',strip=True).split()) if head else ''
+        if not title:
+            # A race card may be a single anchor: "Race name 21 พฤศจิกายน 2569 Venue".
+            if runlah_event_dates(raw)[0]:
+                title=raw[:runlah_event_dates(raw)[2]].strip(' •|–-')
+            else:title=raw
+        title=re.sub(r'^(?:ปิดรับสมัคร|เปิดรับสมัคร|Registration closed|Register now)\s*[:·-]?\s*','',title,flags=re.I).strip()
+        if not 5<=len(title)<=170 or parse_date(title):continue
+        if title.lower() in ('รายละเอียด','สมัครเลย!','register','details','ดูรายละเอียด','read more'):continue
+        key=(canonical_url(url),day)
+        if key in seen:continue
+        seen.add(key)
+        e=event(title,day,url,source,province_from(context),desc='',race_type=classify(title,context),end=last)
         if e:out.append(e)
     return out
+
 
 
 def parse_wordpress(html,source):
@@ -380,8 +409,11 @@ def merge(store,discovered,now):
 
 
 def write_site(store,status,sources,root=BASE):
-    races=[x['race'] for x in store['events']]
-    cats=[c for x in store['events'] for c in x['categories']]
+    cutoff=status.get('sync_date') or dt.datetime.now(dt.timezone(dt.timedelta(hours=7))).date().isoformat()
+    # Public calendar excludes completed races. Keep all history in race_store.json.
+    visible=[x for x in store['events'] if str(x['race'].get('Event end') or x['race'].get('First race date') or x['race'].get('Event start') or '')[:10]>=cutoff]
+    races=[x['race'] for x in visible]
+    cats=[c for x in visible for c in x['categories']]
     payload={'races':races,'categories':cats}
     dump_json(root/'data'/'site_payload.json',payload)
     s=(root/'index.html').read_text(encoding='utf-8')
@@ -415,6 +447,8 @@ def run(root=BASE,fixture_dir=None,only=None,no_network=False):
     sources=read_json(root/'data'/'sources.json')
     store=read_json(root/'data'/'race_store.json')
     now=dt.datetime.now(dt.timezone(dt.timedelta(hours=7))).date().isoformat()
+    # All event visibility cutoffs use the sync date in Thailand.
+    
     stamp=dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
     status=read_json(root/'data'/'sync_status.json')
     session=requests.Session();results=[];found=[]
@@ -426,21 +460,40 @@ def run(root=BASE,fixture_dir=None,only=None,no_network=False):
         if no_network and not fixture_dir:
             results.append({'id':source['id'],'name':source['name'],'state':'not_checked','count':0,'note':'offline mode'})
             continue
-        html,why=fetch(session,source,fixture_dir)
-        if html is None:
-            state='fixture_missing' if why=='no fixture' else 'skipped'
-            results.append({'id':source['id'],'name':source['name'],'state':state,'count':0,'note':why})
-        else:
-            try:
-                events=extract(html,source)
-                found.extend(events)
-                state='ok' if events else 'empty'
-                future_count=sum(1 for e in events if e['date']>=now)
-                results.append({'id':source['id'],'name':source['name'],'state':state,'count':len(events),'future_count':future_count,'note':why if events else 'No validated events found'})
-            except Exception as exc:
-                results.append({'id':source['id'],'name':source['name'],'state':'error','count':0,'note':type(exc).__name__+': '+str(exc)[:130]})
-        if not fixture_dir:time.sleep(0.8)
+        urls=[source['url']]
+        if source['method']=='runlah' and not fixture_dir:
+            # Use actual server-rendered type calendars, not JS-loading homepage.
+            # Each page is checked against robots.txt; limit request rate.
+            urls+=source.get('additional_urls',[])[:5]
+        all_events=[];reports=[];successful_pages=0
+        for target_url in urls:
+            page_source={**source,'url':target_url}
+            html,why=fetch(session,page_source,fixture_dir)
+            if html is None:
+                reports.append(f"{target_url}: {why}")
+            else:
+                try:
+                    events=extract(html,page_source)
+                    successful_pages+=1
+                    all_events.extend(events)
+                    reports.append(f"{target_url}: {len(events)} events")
+                except Exception as exc:
+                    reports.append(f"{target_url}: {type(exc).__name__}: {str(exc)[:80]}")
+            if not fixture_dir:time.sleep(1.0)
+        unique={}
+        for e in all_events:
+            key=(canonical_url(e['url']),e['date'])
+            if key not in unique:unique[key]=e
+        events=list(unique.values())
+        future=[e for e in events if (e.get('end') or e['date'])>=now]
+        found.extend(future)  # Do not add old races discovered in calendars.
+        results.append({'id':source['id'],'name':source['name'],
+            'state':'ok' if events else ('empty' if successful_pages else 'skipped'),
+            'count':len(events),'future_count':len(future),
+            'pages_checked':successful_pages,'pages_requested':len(urls),
+            'note':'; '.join(reports)[:650]})
     counters,review=merge(store,found,now)
+    status['sync_date']=now
     status.update({'last_attempt':stamp,'mode':'fixture_test' if fixture_dir else ('offline' if no_network else 'scheduled'),
                    'source_count':len(sources),'source_results':results,
                    'sources_with_events':sum(x['state']=='ok' for x in results),
