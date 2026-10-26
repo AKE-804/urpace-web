@@ -195,6 +195,12 @@ def runlah_event_dates(text):
     """Read date ranges first so a 13–15 Nov race starts on the 13th."""
     raw=' '.join(str(text or '').split())
     month_pattern=MOKEYS
+    # E.g. 31 ต.ค. - 1 พ.ย. 2569: do not confuse the last day for race start.
+    cross_range=re.search(r'\b(\d{1,2})\s+('+month_pattern+r')\s*[-–]\s*(\d{1,2})\s+('+month_pattern+r')\s+(20\d\d|25\d\d)\b',raw,re.I)
+    if cross_range:
+        first=parse_date(f"{cross_range[1]} {cross_range[2]} {cross_range[5]}")
+        last=parse_date(f"{cross_range[3]} {cross_range[4]} {cross_range[5]}")
+        if first and last and first<=last:return first,last,cross_range.start(),cross_range.end()
     th_range=re.search(r'\b(\d{1,2})\s*[-–]\s*(\d{1,2})\s+('+month_pattern+r')\s+(20\d\d|25\d\d)\b',raw,re.I)
     if th_range:
         first=parse_date(f"{th_range[1]} {th_range[3]} {th_range[4]}")
@@ -238,6 +244,14 @@ def parse_runlah(html,source):
                 title=raw[:runlah_event_dates(raw)[2]].strip(' •|–-')
             else:title=raw
         title=re.sub(r'^(?:ปิดรับสมัคร|เปิดรับสมัคร|Registration closed|Register now)\s*[:·-]?\s*','',title,flags=re.I).strip()
+
+        # Listing cards append category chips and registration badges after the
+        # real event name. They are metadata, not part of the event title.
+        title=re.split(r'(?:&lt;|<)font\b',title,flags=re.I)[0].strip()
+        title=re.split(r'\s+(?:สมัครทาง RUNLAH|ปิดรับสมัคร|เปิดรับสมัครเร็วๆ นี้)\s+',title,maxsplit=1,flags=re.I)[0].strip()
+        chip=re.search(r'\s+(?:อัลตร้ารัน|ฟูลมาราธอน|ฮาล์ฟมาราธอน|มินิมาราธอน|ฟันรัน|วิ่งเทรล|วิ่งครอสคันทรี|วิ่งการกุศล)(?:\s*[·•]|\s*$)',title)
+        if chip:title=title[:chip.start()].strip()
+
         if not 5<=len(title)<=170 or parse_date(title):continue
         if title.lower() in ('รายละเอียด','สมัครเลย!','register','details','ดูรายละเอียด','read more'):continue
         key=(canonical_url(url),day)
@@ -497,6 +511,18 @@ def run(root=BASE,fixture_dir=None,only=None,no_network=False):
                           'next_data':'__NEXT_DATA__' in html,'nuxt_data':'__NUXT__' in html,
                           'body_text_prefix':diag_soup.get_text(' ',strip=True)[:130],
                           'examples':examples},ensure_ascii=False))
+                    if source['method']=='runlah':
+                        soup_a=BeautifulSoup(html,'html.parser')
+                        candidates=[x for x in soup_a.find_all('a',href=True)
+                          if re.fullmatch(r'/(th|en)/[a-zA-Z0-9_-]{4,45}/?',
+                            urlparse(safe_external(x.get('href'),target_url)).path)]
+                        ownedate=sum(bool(runlah_event_dates(x.get_text(' ',strip=True))[0]) for x in candidates)
+                        print('RUNLAH_CARD_STATS '+json.dumps({
+                          'page':target_url,'race_link_candidates':len(candidates),
+                          'cards_with_embedded_date':ownedate,'parsed':len(events),
+                          'samples':[{'path':urlparse(safe_external(x.get('href'),target_url)).path,
+                                      'snippet':x.get_text(' ',strip=True)[:95]}
+                                     for x in candidates[12:16]]},ensure_ascii=False))
                     successful_pages+=1
                     all_events.extend(events)
                     reports.append(f"{target_url}: {len(events)} events")
