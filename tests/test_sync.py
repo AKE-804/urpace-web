@@ -73,7 +73,8 @@ class IntegrationTests(unittest.TestCase):
    shutil.copy(BASE/'index.html',root/'index.html')
    s=run(root,FIX,{'source-001','source-002','source-003'})
    self.assertEqual(s['last_success'],read_json(BASE/'data'/'sync_status.json')['last_success'])
-   r=read_json(root/'data'/'site_payload.json');self.assertEqual(len(r['races']),sum(1 for e in read_json(root/'data'/'race_store.json')['events'] if str(e['race'].get('Event end') or e['race'].get('First race date') or e['race'].get('Event start') or '')[:10]>=s['sync_date']))
+   from sync_races import race_is_past
+   r=read_json(root/'data'/'site_payload.json');self.assertEqual(len(r['races']),sum(1 for e in read_json(root/'data'/'race_store.json')['events'] if not race_is_past(e['race'],s['sync_date'])))
    self.assertIn('RUN QUEST FIXTURE', (root/'index.html').read_text())
    s2=run(root,FIX,{'source-001','source-002','source-003'})
    self.assertEqual(s2['added'],0)
@@ -169,14 +170,14 @@ class RunlahCalendarAndVisibilityTests(unittest.TestCase):
    store=copy.deepcopy(read_json(BASE/'data'/'race_store.json'))
    examples=copy.deepcopy(store['events'][0])
    examples['id']='test-past';examples['race']['Event ID']='test-past'
-   examples['race']['Event start']='2026-10-20';examples['race']['Event end']='2026-10-24'
+   examples['race']['Event start']='2026-10-20';examples['race']['First race date']='2026-10-20';examples['race']['Event end']='2026-10-24'
    examples['categories']=[]
    ongoing=copy.deepcopy(examples)
    ongoing['id']='test-ongoing';ongoing['race']['Event ID']='test-ongoing'
-   ongoing['race']['Event start']='2026-10-25';ongoing['race']['Event end']='2026-10-27'
+   ongoing['race']['Event start']='2026-10-25';ongoing['race']['First race date']='2026-10-25';ongoing['race']['Event end']='2026-10-27'
    future=copy.deepcopy(examples)
    future['id']='test-future';future['race']['Event ID']='test-future'
-   future['race']['Event start']='2026-11-12';future['race']['Event end']='2026-11-12'
+   future['race']['Event start']='2026-11-12';future['race']['First race date']='2026-11-12';future['race']['Event end']='2026-11-12'
    synthetic={'events':[examples,ongoing,future]}
    status={'sync_date':'2026-10-26','source_results':[]}
    write_site(synthetic,status,[],root)
