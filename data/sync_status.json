@@ -1,0 +1,494 @@
+{
+  "last_attempt": "2026-10-26T08:51:19+00:00",
+  "last_success": null,
+  "mode": "offline",
+  "notes": "Original 28 curated races from 2026-10-25; 67 sources registered, no live fetch completed by this release.",
+  "source_count": 67,
+  "auto_candidate_count": 60,
+  "source_results": [
+    {
+      "id": "source-001",
+      "name": "RUNLAH",
+      "state": "not_checked",
+      "count": 0,
+      "note": "offline mode"
+    },
+    {
+      "id": "source-002",
+      "name": "Jog & Joy Calendar",
+      "state": "not_checked",
+      "count": 0,
+      "note": "offline mode"
+    },
+    {
+      "id": "source-003",
+      "name": "PatRunning",
+      "state": "not_checked",
+      "count": 0,
+      "note": "offline mode"
+    },
+    {
+      "id": "source-004",
+      "name": "วิ่งไหนดี (WND)",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-005",
+      "name": "Paiwingkan",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-006",
+      "name": "ThaiJogging Foundation Calendar",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-007",
+      "name": "Trail Thailand",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-008",
+      "name": "I Do Run",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-009",
+      "name": "Runifinder",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-010",
+      "name": "RunThaiHub",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-011",
+      "name": "TheSubList",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-012",
+      "name": "LUI Together",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-013",
+      "name": "Running in Thailand",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-014",
+      "name": "Finishers Thailand",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-015",
+      "name": "World Race Calendar - Thailand",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-016",
+      "name": "AIMS Member Race Directory",
+      "state": "manual",
+      "count": 0,
+      "note": "manual"
+    },
+    {
+      "id": "source-017",
+      "name": "World Athletics Label Road Races",
+      "state": "manual",
+      "count": 0,
+      "note": "manual"
+    },
+    {
+      "id": "source-018",
+      "name": "ThaiRun Race",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-019",
+      "name": "EventRunning",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-020",
+      "name": "GoToRace",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-021",
+      "name": "Checkrace",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-022",
+      "name": "Regis.run",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-023",
+      "name": "ThaiPhotoRun",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-024",
+      "name": "RunLover",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-025",
+      "name": "RUN IN",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-026",
+      "name": "RUNRACE.IN.TH",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-027",
+      "name": "RaceThai",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-028",
+      "name": "SANSATAN",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-029",
+      "name": "Checkrace Virtual",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-030",
+      "name": "RaceUp Work",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-031",
+      "name": "MICE & Communication",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-032",
+      "name": "Trail Masters Series",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-033",
+      "name": "Ace Timing",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-034",
+      "name": "MICE ThaiRun subportal",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-035",
+      "name": "Bangkok Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-036",
+      "name": "Bangkok Midnight Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "manual"
+    },
+    {
+      "id": "source-037",
+      "name": "Amazing Thailand Marathon Bangkok",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-038",
+      "name": "Bangsaen21",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-039",
+      "name": "Bangsaen42",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-040",
+      "name": "Bangsaen10",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-041",
+      "name": "Buriram Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-042",
+      "name": "Scenic Half Marathon Chanthaburi",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-043",
+      "name": "Chiang Mai Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-044",
+      "name": "Chombeung Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-045",
+      "name": "HATYAI21",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-046",
+      "name": "Khao Yai Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-047",
+      "name": "Khon Kaen International Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-048",
+      "name": "Korat Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-049",
+      "name": "Scenic Half Marathon Krabi",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-050",
+      "name": "Laguna Phuket Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-051",
+      "name": "Mae Moh Half Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-052",
+      "name": "Scenic Marathon Nakhon Phanom",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-053",
+      "name": "Nong Khai Running Festival",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-054",
+      "name": "Pattaya Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-055",
+      "name": "Photak Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-056",
+      "name": "Songkhla Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-057",
+      "name": "Thabo Midnight Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-058",
+      "name": "Thai Sikh Run",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-059",
+      "name": "Watlaharnrai Half Marathon",
+      "state": "manual",
+      "count": 0,
+      "note": "manual"
+    },
+    {
+      "id": "source-060",
+      "name": "Chiang Mai Thailand by UTMB",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-061",
+      "name": "Amazean Jungle Thailand by UTMB",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-062",
+      "name": "Thailand Tri-League — Event Calendar",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-063",
+      "name": "Thailand Tri-League — Online Registration",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-064",
+      "name": "Amazing Thailand City Run",
+      "state": "manual",
+      "count": 0,
+      "note": "jsonld"
+    },
+    {
+      "id": "source-065",
+      "name": "We Run Thailand / parkrunthailand.com",
+      "state": "manual",
+      "count": 0,
+      "note": "js_app"
+    },
+    {
+      "id": "source-066",
+      "name": "We Run Thailand — Event List",
+      "state": "manual",
+      "count": 0,
+      "note": "js_app"
+    },
+    {
+      "id": "source-067",
+      "name": "We Run @nywhere",
+      "state": "manual",
+      "count": 0,
+      "note": "js_app"
+    }
+  ],
+  "added": 0,
+  "updated": 0,
+  "unchanged": 0,
+  "review_count": 0,
+  "sources_with_events": 0,
+  "events_parsed": 0,
+  "future_events_parsed": 0,
+  "beta_gate": {
+    "ready": false,
+    "upcoming_events": 28,
+    "min_upcoming_events": 60,
+    "live_sources_this_run": 0,
+    "min_live_sources": 2,
+    "rule": "UR.PACE beta release gate; not a guarantee of completeness"
+  }
+}

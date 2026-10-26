@@ -1,0 +1,1795 @@
+{
+  "schema": 1,
+  "events": [
+    {
+      "id": "TH26-001",
+      "race": {
+        "Event ID": "TH26-001",
+        "Event / งานวิ่ง": "Wild Race @ Kaeng Krachan World Heritage 2026",
+        "Event start": "2026-11-01",
+        "Event end": "2026-11-01",
+        "First race date": "2026-11-01",
+        "จังหวัด": "เพชรบุรี",
+        "จุดจัดงาน / Venue": "จุดกางเต็นท์บ้านกร่าง อุทยานแห่งชาติแก่งกระจาน",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "5, 10, 23, 33",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/wrkk26",
+        "URL สมัคร": "https://www.runlah.com/th/wrkk26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "หน้าเว็บแจ้งระยะและค่าสมัคร"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-001",
+          "ระยะ / Category": "33K",
+          "วันแข่งจริง": "2026-11-01",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "33",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "2300",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/wrkk26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-001",
+          "ระยะ / Category": "23K",
+          "วันแข่งจริง": "2026-11-01",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "23",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1850",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/wrkk26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-001",
+          "ระยะ / Category": "10K",
+          "วันแข่งจริง": "2026-11-01",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "990",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/wrkk26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-001",
+          "ระยะ / Category": "5K",
+          "วันแข่งจริง": "2026-11-01",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "750",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/wrkk26",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/wrkk26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-002",
+      "race": {
+        "Event ID": "TH26-002",
+        "Event / งานวิ่ง": "NONGPRALAE 2026 Series 2",
+        "Event start": "2026-11-07",
+        "Event end": "2026-11-08",
+        "First race date": "2026-11-07",
+        "จังหวัด": "อุตรดิตถ์",
+        "จุดจัดงาน / Venue": "สวนสาธารณะหนองพระแล อ.ลับแล",
+        "ประเภท": "Ultra",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/npl26",
+        "URL สมัคร": "https://www.runlah.com/th/npl26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "วันแข่งตามปฏิทินงาน"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/npl26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-003",
+      "race": {
+        "Event ID": "TH26-003",
+        "Event / งานวิ่ง": "LAMPANG MYSSTIC TRAIL 2026",
+        "Event start": "2026-11-13",
+        "Event end": "2026-11-15",
+        "First race date": "2026-11-13",
+        "จังหวัด": "ลำปาง",
+        "จุดจัดงาน / Venue": "ศูนย์อนุรักษ์ช้างไทย อ.ห้างฉัตร",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "10, 25, 55, 70",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/lpmt26",
+        "URL สมัคร": "https://www.runlah.com/th/lpmt26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "4 ระยะ; 10, 25, 55, 70 กม. ตามหน้าเฉพาะงาน"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-003",
+          "ระยะ / Category": "Trail 70",
+          "วันแข่งจริง": "",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "70",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "3800",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lpmt26",
+          "หมายเหตุ": "ต้องยืนยันวัน/เวลาจริงแยกรายระยะ"
+        },
+        {
+          "Event ID": "TH26-003",
+          "ระยะ / Category": "Trail 55",
+          "วันแข่งจริง": "",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "55",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "2800",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lpmt26",
+          "หมายเหตุ": "ต้องยืนยันวัน/เวลาจริงแยกรายระยะ"
+        },
+        {
+          "Event ID": "TH26-003",
+          "ระยะ / Category": "Trail 25",
+          "วันแข่งจริง": "",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "25",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1800",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lpmt26",
+          "หมายเหตุ": "ต้องยืนยันวัน/เวลาจริงแยกรายระยะ"
+        },
+        {
+          "Event ID": "TH26-003",
+          "ระยะ / Category": "Trail 10",
+          "วันแข่งจริง": "",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "700",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lpmt26",
+          "หมายเหตุ": "ต้องยืนยันวัน/เวลาจริงแยกรายระยะ"
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/lpmt26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-004",
+      "race": {
+        "Event ID": "TH26-004",
+        "Event / งานวิ่ง": "Black Ivory Trail Thailand",
+        "Event start": "2026-11-20",
+        "Event end": "2026-11-21",
+        "First race date": "2026-11-21",
+        "จังหวัด": "น่าน",
+        "จุดจัดงาน / Venue": "ที่ว่าการอำเภอแม่จริม",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "5, 8, 12",
+        "สถานะรับสมัคร*": "มีลิงก์สมัคร",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "Mission Earth",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/bit26",
+        "URL สมัคร": "https://www.runlah.com/th/bit26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "20 พ.ย. รับอุปกรณ์/City Run; 21 พ.ย. แข่งเทรล"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-004",
+          "ระยะ / Category": "Peak Challenge",
+          "วันแข่งจริง": "2026-11-21",
+          "เวลา Start (ICT)": "06:00",
+          "ระยะทาง (กม.)": "12",
+          "Elevation gain (เมตร)": "310",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "2890",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/bit26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-004",
+          "ระยะ / Category": "Forest Trail",
+          "วันแข่งจริง": "2026-11-21",
+          "เวลา Start (ICT)": "06:15",
+          "ระยะทาง (กม.)": "8",
+          "Elevation gain (เมตร)": "156",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "2490",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/bit26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-004",
+          "ระยะ / Category": "Fun Trail",
+          "วันแข่งจริง": "2026-11-21",
+          "เวลา Start (ICT)": "06:30",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "100",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1990",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/bit26",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/bit26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-005",
+      "race": {
+        "Event ID": "TH26-005",
+        "Event / งานวิ่ง": "MUSS Mini Marathon ครั้งที่ 11",
+        "Event start": "2026-11-21",
+        "Event end": "2026-11-21",
+        "First race date": "2026-11-21",
+        "จังหวัด": "นครปฐม",
+        "จุดจัดงาน / Venue": "มหาวิทยาลัยมหิดล ศาลายา",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "4, 10.5",
+        "สถานะรับสมัคร*": "มีลิงก์สมัคร",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "วิทยาลัยวิทยาศาสตร์และเทคโนโลยีการกีฬา ม.มหิดล",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/muss2026",
+        "URL สมัคร": "https://www.runlah.com/th/muss2026",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "งานปล่อยตัวช่วงเย็น"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-005",
+          "ระยะ / Category": "MUSS Mini",
+          "วันแข่งจริง": "2026-11-21",
+          "เวลา Start (ICT)": "17:45",
+          "ระยะทาง (กม.)": "10.5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "650",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/muss2026",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-005",
+          "ระยะ / Category": "MUSS Fun",
+          "วันแข่งจริง": "2026-11-21",
+          "เวลา Start (ICT)": "17:50",
+          "ระยะทาง (กม.)": "4",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "550",
+          "ชนิดราคา / เงื่อนไข": "หน้าเว็บแสดงราคา",
+          "URL อ้างอิง": "https://www.runlah.com/th/muss2026",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/muss2026",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-006",
+      "race": {
+        "Event ID": "TH26-006",
+        "Event / งานวิ่ง": "Nakhonsawan Speed Trail",
+        "Event start": "2026-11-22",
+        "Event end": "2026-11-22",
+        "First race date": "2026-11-22",
+        "จังหวัด": "นครสวรรค์",
+        "จุดจัดงาน / Venue": "สำนักสงฆ์เขารังจันทร์ทราราม หนองปลิง",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/nkst2026",
+        "URL สมัคร": "https://www.runlah.com/th/nkst2026",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "วิ่งเทรล/อัลตร้า"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/nkst2026",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-007",
+      "race": {
+        "Event ID": "TH26-007",
+        "Event / งานวิ่ง": "Pangsida Camp Trail 2026",
+        "Event start": "2026-11-22",
+        "Event end": "2026-11-22",
+        "First race date": "2026-11-22",
+        "จังหวัด": "สระแก้ว",
+        "จุดจัดงาน / Venue": "อุทยานแห่งชาติปางสีดา",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ปิดรับสมัคร (หน้าเว็บรวม)",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Aggregator",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th",
+        "URL สมัคร": "",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "พบในปฏิทิน",
+        "หมายเหตุ": "แสดงปิดรับสมัครบนหน้าปฏิทิน RUNLAH"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th",
+          "source_name": "Aggregator",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-008",
+      "race": {
+        "Event ID": "TH26-008",
+        "Event / งานวิ่ง": "Amazing Thailand Marathon Bangkok 2026",
+        "Event start": "2026-11-28",
+        "Event end": "2026-11-29",
+        "First race date": "2026-11-28",
+        "จังหวัด": "กรุงเทพมหานคร",
+        "จุดจัดงาน / Venue": "กรุงเทพมหานคร (ตรวจสอบจุดปล่อยตัวตามระยะ)",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "4.5, 10, 21.1, 42.195",
+        "สถานะรับสมัคร*": "กำหนดรับสมัครถึง 31 ต.ค.",
+        "วันสิ้นสุดรับสมัคร**": "2026-10-31",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Official organizer",
+        "URL แหล่งอ้างอิง": "https://www.atmbkk.com/",
+        "URL สมัคร": "https://www.atmbkk.com/",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "เว็บทางการ",
+        "หมายเหตุ": "21K แข่ง 28 พ.ย.; 42K/10K/4.5K แข่ง 29 พ.ย.; โควตาอาจเต็มก่อน"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-008",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2026-11-28",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "21.1",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.atmbkk.com/",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-008",
+          "ระยะ / Category": "Marathon",
+          "วันแข่งจริง": "2026-11-29",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "42.195",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.atmbkk.com/",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-008",
+          "ระยะ / Category": "10K",
+          "วันแข่งจริง": "2026-11-29",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.atmbkk.com/",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-008",
+          "ระยะ / Category": "Fun Run",
+          "วันแข่งจริง": "2026-11-29",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "4.5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.atmbkk.com/",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.atmbkk.com/",
+          "source_name": "Official organizer",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-009",
+      "race": {
+        "Event ID": "TH26-009",
+        "Event / งานวิ่ง": "Chiang Mai Thailand by UTMB 2026",
+        "Event start": "2026-11-27",
+        "Event end": "2026-12-06",
+        "First race date": "2026-11-28",
+        "จังหวัด": "เชียงใหม่",
+        "จุดจัดงาน / Venue": "หลายสถานที่ในจังหวัดเชียงใหม่",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "3, 5, 17, 20, 26, 57, 63, 100, 173",
+        "สถานะรับสมัคร*": "หน้าเว็บระบุเปิดรับสมัคร",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Official organizer",
+        "URL แหล่งอ้างอิง": "https://chiangmai.utmb.world/th",
+        "URL สมัคร": "https://chiangmai.utmb.world/th",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "เว็บทางการ",
+        "หมายเหตุ": "แต่ละ race มีวันวิ่งต่างกันและ Elevation Gain ต่างกัน"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "PAGODA 50-DAY",
+          "วันแข่งจริง": "2026-11-28",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "57",
+          "Elevation gain (เมตร)": "3600",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "PAGODA 50-NIGHT",
+          "วันแข่งจริง": "2026-11-28",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "57",
+          "Elevation gain (เมตร)": "3600",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "INTHANON 20",
+          "วันแข่งจริง": "2026-11-29",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "20",
+          "Elevation gain (เมตร)": "800",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "WARM UP RUN - INTHANON",
+          "วันแข่งจริง": "2026-11-29",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "240",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "ELEPHANT 100",
+          "วันแข่งจริง": "2026-12-04",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "100",
+          "Elevation gain (เมตร)": "5500",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "CHIANG DAO 160",
+          "วันแข่งจริง": "2026-12-04",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "173",
+          "Elevation gain (เมตร)": "9800",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "WARM UP RUN - PAO PARK",
+          "วันแข่งจริง": "2026-12-04",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "3",
+          "Elevation gain (เมตร)": "100",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "HMONG 50-DAY",
+          "วันแข่งจริง": "2026-12-05",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "63",
+          "Elevation gain (เมตร)": "3000",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "HMONG 50-NIGHT",
+          "วันแข่งจริง": "2026-12-05",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "63",
+          "Elevation gain (เมตร)": "3000",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "SUTHEP 20-NIGHT",
+          "วันแข่งจริง": "2026-12-05",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "26",
+          "Elevation gain (เมตร)": "1100",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "SUTHEP 20-DAY",
+          "วันแข่งจริง": "2026-12-06",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "26",
+          "Elevation gain (เมตร)": "1100",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-009",
+          "ระยะ / Category": "CHEDI 20",
+          "วันแข่งจริง": "2026-12-06",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "17",
+          "Elevation gain (เมตร)": "700",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://chiangmai.utmb.world/th",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://chiangmai.utmb.world/th",
+          "source_name": "Official organizer",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-010",
+      "race": {
+        "Event ID": "TH26-010",
+        "Event / งานวิ่ง": "The 13th THANYAPURA TRAIL RUN 2026",
+        "Event start": "2026-11-29",
+        "Event end": "2026-11-29",
+        "First race date": "2026-11-29",
+        "จังหวัด": "ภูเก็ต",
+        "จุดจัดงาน / Venue": "ธัญญปุระ ภูเก็ต",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/ttr2026",
+        "URL สมัคร": "https://www.runlah.com/th/ttr2026",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "งานเทรล"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/ttr2026",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-011",
+      "race": {
+        "Event ID": "TH26-011",
+        "Event / งานวิ่ง": "LANSAKA Marathon 2026",
+        "Event start": "2026-12-06",
+        "Event end": "2026-12-06",
+        "First race date": "2026-12-06",
+        "จังหวัด": "นครศรีธรรมราช",
+        "จุดจัดงาน / Venue": "สะพานคีรีวง บ้านคีรีวง อ.ลานสกา",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "4, 10, 21.1, 42.195",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "Nakhon Walk Run",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/lsk26",
+        "URL สมัคร": "https://www.runlah.com/th/lsk26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "มีค่าสมัครปกติแยก 4 ระยะและประเภท VIP"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-011",
+          "ระยะ / Category": "Full Marathon",
+          "วันแข่งจริง": "2026-12-06",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "42.195",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "999",
+          "ชนิดราคา / เงื่อนไข": "ค่าสมัครปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lsk26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-011",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2026-12-06",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "21.1",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "899",
+          "ชนิดราคา / เงื่อนไข": "ค่าสมัครปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lsk26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-011",
+          "ระยะ / Category": "Mini Marathon",
+          "วันแข่งจริง": "2026-12-06",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "699",
+          "ชนิดราคา / เงื่อนไข": "ค่าสมัครปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lsk26",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH26-011",
+          "ระยะ / Category": "Fun Run",
+          "วันแข่งจริง": "2026-12-06",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "4",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "399",
+          "ชนิดราคา / เงื่อนไข": "ค่าสมัครปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/lsk26",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/lsk26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-012",
+      "race": {
+        "Event ID": "TH26-012",
+        "Event / งานวิ่ง": "MUNA Charity Run 2026",
+        "Event start": "2026-12-12",
+        "Event end": "2026-12-12",
+        "First race date": "2026-12-12",
+        "จังหวัด": "นครสวรรค์",
+        "จุดจัดงาน / Venue": "มหาวิทยาลัยมหิดล วิทยาเขตนครสวรรค์",
+        "ประเภท": "Charity Road",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/muna26",
+        "URL สมัคร": "https://www.runlah.com/th/muna26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "วิ่งการกุศล"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/muna26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-013",
+      "race": {
+        "Event ID": "TH26-013",
+        "Event / งานวิ่ง": "Samui Santa Run 2026",
+        "Event start": "2026-12-19",
+        "Event end": "2026-12-19",
+        "First race date": "2026-12-19",
+        "จังหวัด": "สุราษฎร์ธานี",
+        "จุดจัดงาน / Venue": "Central Samui หาดเฉวง",
+        "ประเภท": "Fun Run",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/samuistr26",
+        "URL สมัคร": "https://www.runlah.com/th/samuistr26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "เกาะสมุย"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/samuistr26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-014",
+      "race": {
+        "Event ID": "TH26-014",
+        "Event / งานวิ่ง": "Muang Thai Chiang Mai Marathon 2026",
+        "Event start": "2026-12-20",
+        "Event end": "2026-12-20",
+        "First race date": "2026-12-20",
+        "จังหวัด": "เชียงใหม่",
+        "จุดจัดงาน / Venue": "ข่วงประตูท่าแพ เชียงใหม่",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "3, 10, 21.1, 42.195",
+        "สถานะรับสมัคร*": "หน้าเว็บระบุเปิดรับสมัคร",
+        "วันสิ้นสุดรับสมัคร**": "2026-12-15",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Official organizer",
+        "URL แหล่งอ้างอิง": "https://www.chiangmaimarathon.com/th",
+        "URL สมัคร": "https://www.chiangmaimarathon.com/th",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "เว็บทางการ",
+        "หมายเหตุ": "มีหลายรอบราคา: ปกติ 31 ต.ค., ล่าช้า 20 พ.ย., การกุศลถึง 15 ธ.ค.; ค่าสมัครไทย/ต่างชาติไม่เท่ากัน"
+      },
+      "categories": [
+        {
+          "Event ID": "TH26-014",
+          "ระยะ / Category": "Marathon",
+          "วันแข่งจริง": "2026-12-20",
+          "เวลา Start (ICT)": "03:00",
+          "ระยะทาง (กม.)": "42.195",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1200",
+          "ชนิดราคา / เงื่อนไข": "คนไทย: รอบปกติถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.chiangmaimarathon.com/th",
+          "หมายเหตุ": "ค่าสมัครยังไม่รวมค่าธรรมเนียม; มีรอบราคาอื่น"
+        },
+        {
+          "Event ID": "TH26-014",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2026-12-20",
+          "เวลา Start (ICT)": "04:00",
+          "ระยะทาง (กม.)": "21.1",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "900",
+          "ชนิดราคา / เงื่อนไข": "คนไทย: รอบปกติถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.chiangmaimarathon.com/th",
+          "หมายเหตุ": "ค่าสมัครยังไม่รวมค่าธรรมเนียม; มีรอบราคาอื่น"
+        },
+        {
+          "Event ID": "TH26-014",
+          "ระยะ / Category": "10K",
+          "วันแข่งจริง": "2026-12-20",
+          "เวลา Start (ICT)": "05:00",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "600",
+          "ชนิดราคา / เงื่อนไข": "คนไทย: รอบปกติถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.chiangmaimarathon.com/th",
+          "หมายเหตุ": "ค่าสมัครยังไม่รวมค่าธรรมเนียม; มีรอบราคาอื่น"
+        },
+        {
+          "Event ID": "TH26-014",
+          "ระยะ / Category": "Smile Run 3K",
+          "วันแข่งจริง": "2026-12-20",
+          "เวลา Start (ICT)": "05:20",
+          "ระยะทาง (กม.)": "3",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "500",
+          "ชนิดราคา / เงื่อนไข": "คนไทย: รอบปกติถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.chiangmaimarathon.com/th",
+          "หมายเหตุ": "ค่าสมัครยังไม่รวมค่าธรรมเนียม; มีรอบราคาอื่น"
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.chiangmaimarathon.com/th",
+          "source_name": "Official organizer",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-015",
+      "race": {
+        "Event ID": "TH26-015",
+        "Event / งานวิ่ง": "Run With The Flow 2026 (UDON)",
+        "Event start": "2026-12-20",
+        "Event end": "2026-12-20",
+        "First race date": "2026-12-20",
+        "จังหวัด": "อุดรธานี",
+        "จุดจัดงาน / Venue": "สวนสาธารณะหนองประจักษ์",
+        "ประเภท": "Charity Road",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/rwf26ud",
+        "URL สมัคร": "https://www.runlah.com/th/rwf26ud",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "หลายระยะ"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/rwf26ud",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-016",
+      "race": {
+        "Event ID": "TH26-016",
+        "Event / งานวิ่ง": "TVA Charity Running 2026",
+        "Event start": "2026-12-20",
+        "Event end": "2026-12-20",
+        "First race date": "2026-12-20",
+        "จังหวัด": "ปทุมธานี",
+        "จุดจัดงาน / Venue": "สนามกีฬาเฉลิมพระเกียรติ ศูนย์ฝึกกรมพลศึกษา อ.ธัญบุรี",
+        "ประเภท": "Charity Road",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/tva26",
+        "URL สมัคร": "https://www.runlah.com/th/tva26",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "หลายระยะ"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/tva26",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH26-017",
+      "race": {
+        "Event ID": "TH26-017",
+        "Event / งานวิ่ง": "Jingle Bells Run 2026 วิ่งนี้เพื่อน้อง",
+        "Event start": "2026-12-27",
+        "Event end": "2026-12-27",
+        "First race date": "2026-12-27",
+        "จังหวัด": "กรุงเทพมหานคร",
+        "จุดจัดงาน / Venue": "สวนวชิรเบญจทัศ (สวนรถไฟ)",
+        "ประเภท": "Fun Run",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/jbr2026",
+        "URL สมัคร": "https://www.runlah.com/th/jbr2026",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "งานวิ่งเพื่อการกุศล"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/jbr2026",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-018",
+      "race": {
+        "Event ID": "TH27-018",
+        "Event / งานวิ่ง": "Pokémon Run 30 Thailand Edition",
+        "Event start": "2027-01-09",
+        "Event end": "2027-01-10",
+        "First race date": "2027-01-09",
+        "จังหวัด": "กรุงเทพมหานคร",
+        "จุดจัดงาน / Venue": "CentralWorld Square และลานหน้าอาคารนิมิบุตร",
+        "ประเภท": "Fun Run",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "เปิดรับสมัครเร็ว ๆ นี้",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/pkm27",
+        "URL สมัคร": "https://www.runlah.com/th/pkm27",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "ประกาศเร็ว ๆ นี้บนหน้าปฏิทิน"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/pkm27",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-019",
+      "race": {
+        "Event ID": "TH27-019",
+        "Event / งานวิ่ง": "Bangkok Marathon 2027",
+        "Event start": "2027-01-10",
+        "Event end": "2027-01-10",
+        "First race date": "2027-01-10",
+        "จังหวัด": "กรุงเทพมหานคร",
+        "จุดจัดงาน / Venue": "ถนนสนามไชย พระบรมมหาราชวัง",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "5, 10, 21.1, 42.195",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "Running Health Association of Thailand",
+        "ชนิดแหล่งข้อมูล": "Official organizer",
+        "URL แหล่งอ้างอิง": "https://www.bkkmarathon.com/RaceInformation/6a0416c2d573bf00132949c9/langEN",
+        "URL สมัคร": "https://www.bkkmarathon.com/",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "เว็บทางการ",
+        "หมายเหตุ": "Full เริ่ม 00:30; Half 03:00; 10K 04:30; 5K 05:00"
+      },
+      "categories": [
+        {
+          "Event ID": "TH27-019",
+          "ระยะ / Category": "Marathon",
+          "วันแข่งจริง": "2027-01-10",
+          "เวลา Start (ICT)": "00:30",
+          "ระยะทาง (กม.)": "42.195",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.bkkmarathon.com/RaceInformation/6a0416c2d573bf00132949c9/langEN",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-019",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2027-01-10",
+          "เวลา Start (ICT)": "03:00",
+          "ระยะทาง (กม.)": "21.1",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.bkkmarathon.com/RaceInformation/6a0416c2d573bf00132949c9/langEN",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-019",
+          "ระยะ / Category": "Mini Marathon",
+          "วันแข่งจริง": "2027-01-10",
+          "เวลา Start (ICT)": "04:30",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.bkkmarathon.com/RaceInformation/6a0416c2d573bf00132949c9/langEN",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-019",
+          "ระยะ / Category": "Micro Marathon",
+          "วันแข่งจริง": "2027-01-10",
+          "เวลา Start (ICT)": "05:00",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://www.bkkmarathon.com/RaceInformation/6a0416c2d573bf00132949c9/langEN",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.bkkmarathon.com/RaceInformation/6a0416c2d573bf00132949c9/langEN",
+          "source_name": "Official organizer",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-020",
+      "race": {
+        "Event ID": "TH27-020",
+        "Event / งานวิ่ง": "Khao Eto Camp Trail ครั้งที่ 7",
+        "Event start": "2027-01-10",
+        "Event end": "2027-01-10",
+        "First race date": "2027-01-10",
+        "จังหวัด": "ปราจีนบุรี",
+        "จุดจัดงาน / Venue": "ป่านันทนาการน้ำตกเขาอีโต้ อ.เมือง",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "3.5, 8, 15, 25",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/keto2027",
+        "URL สมัคร": "https://www.runlah.com/th/keto2027",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "ระยะอ้างจากปฏิทินหลายแหล่ง"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/keto2027",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-021",
+      "race": {
+        "Event ID": "TH27-021",
+        "Event / งานวิ่ง": "Buriram Marathon 2027",
+        "Event start": "2027-01-23",
+        "Event end": "2027-01-23",
+        "First race date": "2027-01-23",
+        "จังหวัด": "บุรีรัมย์",
+        "จุดจัดงาน / Venue": "Chang International Circuit → Chang Arena",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "4.554, 10, 21.1, 42.195",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "Buriram UIC",
+        "ชนิดแหล่งข้อมูล": "Official organizer",
+        "URL แหล่งอ้างอิง": "https://burirammarathon.com/",
+        "URL สมัคร": "https://burirammarathon.com/",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "เว็บทางการ",
+        "หมายเหตุ": "ประกาศวันและระยะโดย กกท.; การเปิดสมัครออนไลน์เคยกำหนดเดือน ก.ค. 2569"
+      },
+      "categories": [
+        {
+          "Event ID": "TH27-021",
+          "ระยะ / Category": "Marathon",
+          "วันแข่งจริง": "2027-01-23",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "42.195",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://burirammarathon.com/",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-021",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2027-01-23",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "21.1",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://burirammarathon.com/",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-021",
+          "ระยะ / Category": "Mini Marathon",
+          "วันแข่งจริง": "2027-01-23",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://burirammarathon.com/",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-021",
+          "ระยะ / Category": "Fun Run",
+          "วันแข่งจริง": "2027-01-23",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "4.554",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "",
+          "ชนิดราคา / เงื่อนไข": "",
+          "URL อ้างอิง": "https://burirammarathon.com/",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://burirammarathon.com/",
+          "source_name": "Official organizer",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-022",
+      "race": {
+        "Event ID": "TH27-022",
+        "Event / งานวิ่ง": "TUN RUN 2027",
+        "Event start": "2027-01-24",
+        "Event end": "2027-01-24",
+        "First race date": "2027-01-24",
+        "จังหวัด": "กรุงเทพมหานคร",
+        "จุดจัดงาน / Venue": "โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/tunrun2027",
+        "URL สมัคร": "https://www.runlah.com/th/tunrun2027",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "มินิมาราธอน/ฟันรัน"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/tunrun2027",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-023",
+      "race": {
+        "Event ID": "TH27-023",
+        "Event / งานวิ่ง": "Satri Nakhonsawan Memory Night Run 2027",
+        "Event start": "2027-01-30",
+        "Event end": "2027-01-30",
+        "First race date": "2027-01-30",
+        "จังหวัด": "นครสวรรค์",
+        "จุดจัดงาน / Venue": "บึงบอระเพ็ด",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/sns27",
+        "URL สมัคร": "https://www.runlah.com/th/sns27",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "Night Run"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/sns27",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-024",
+      "race": {
+        "Event ID": "TH27-024",
+        "Event / งานวิ่ง": "31st Thai Sikh Run 2027",
+        "Event start": "2027-01-31",
+        "Event end": "2027-01-31",
+        "First race date": "2027-01-31",
+        "จังหวัด": "กรุงเทพมหานคร",
+        "จุดจัดงาน / Venue": "ถนนบูรพา (ดิโอลด์สยาม)",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/tsr2027",
+        "URL สมัคร": "https://www.runlah.com/th/tsr2027",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "ฮาล์ฟ/มินิ/ฟันรัน"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/tsr2027",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-025",
+      "race": {
+        "Event ID": "TH27-025",
+        "Event / งานวิ่ง": "Khun Dan Trail 2027",
+        "Event start": "2027-02-14",
+        "Event end": "2027-02-14",
+        "First race date": "2027-02-14",
+        "จังหวัด": "นครนายก",
+        "จุดจัดงาน / Venue": "เขื่อนขุนด่านปราการชล",
+        "ประเภท": "Trail",
+        "ระยะ (กม.)": "",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/kdtr2027",
+        "URL สมัคร": "https://www.runlah.com/th/kdtr2027",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "งานเทรล"
+      },
+      "categories": [],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/kdtr2027",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-026",
+      "race": {
+        "Event ID": "TH27-026",
+        "Event / งานวิ่ง": "Nakhonsawan Dragon Run 2027",
+        "Event start": "2027-02-14",
+        "Event end": "2027-02-14",
+        "First race date": "2027-02-14",
+        "จังหวัด": "นครสวรรค์",
+        "จุดจัดงาน / Venue": "สำนักงานเทศบาลนครนครสวรรค์",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "5, 10, 21",
+        "สถานะรับสมัคร*": "มีลิงก์สมัคร",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "สำนักงานเทศบาลนครนครสวรรค์",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/ndr2027",
+        "URL สมัคร": "https://www.runlah.com/th/ndr2027",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "Early Bird ถึง 31 ต.ค. 2569; วันรับอุปกรณ์ 13 ก.พ. 2570"
+      },
+      "categories": [
+        {
+          "Event ID": "TH27-026",
+          "ระยะ / Category": "SPIRIT Half Marathon",
+          "วันแข่งจริง": "2027-02-14",
+          "เวลา Start (ICT)": "04:45",
+          "ระยะทาง (กม.)": "21",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "650",
+          "ชนิดราคา / เงื่อนไข": "Early Bird ถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.runlah.com/th/ndr2027",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-026",
+          "ระยะ / Category": "BEYOND Mini",
+          "วันแข่งจริง": "2027-02-14",
+          "เวลา Start (ICT)": "05:30",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "550",
+          "ชนิดราคา / เงื่อนไข": "Early Bird ถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.runlah.com/th/ndr2027",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-026",
+          "ระยะ / Category": "UNITY Micro",
+          "วันแข่งจริง": "2027-02-14",
+          "เวลา Start (ICT)": "05:45",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "450",
+          "ชนิดราคา / เงื่อนไข": "Early Bird ถึง 31 ต.ค. 2569",
+          "URL อ้างอิง": "https://www.runlah.com/th/ndr2027",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/ndr2027",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-027",
+      "race": {
+        "Event ID": "TH27-027",
+        "Event / งานวิ่ง": "Tat Mok Marathon 2027",
+        "Event start": "2027-02-21",
+        "Event end": "2027-02-21",
+        "First race date": "2027-02-21",
+        "จังหวัด": "เพชรบูรณ์",
+        "จุดจัดงาน / Venue": "อุทยานแห่งชาติตาดหมอก ด่านห้วยบง",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "5, 10, 21, 42",
+        "สถานะรับสมัคร*": "ตรวจสอบกับต้นทาง",
+        "วันสิ้นสุดรับสมัคร**": "",
+        "ผู้จัด": "สมาคมกีฬาแห่งจังหวัดเพชรบูรณ์",
+        "ชนิดแหล่งข้อมูล": "Registration platform",
+        "URL แหล่งอ้างอิง": "https://www.runlah.com/th/ttm2027",
+        "URL สมัคร": "https://www.runlah.com/th/ttm2027",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "ผ่านระบบรับสมัคร",
+        "หมายเหตุ": "ระยะตามหน้าเฉพาะงาน 5, 10, 21, 42 กม."
+      },
+      "categories": [
+        {
+          "Event ID": "TH27-027",
+          "ระยะ / Category": "Full Marathon",
+          "วันแข่งจริง": "2027-02-21",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "42",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1090",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/ttm2027",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-027",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2027-02-21",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "21",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "890",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/ttm2027",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-027",
+          "ระยะ / Category": "Mini Marathon",
+          "วันแข่งจริง": "2027-02-21",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "690",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/ttm2027",
+          "หมายเหตุ": ""
+        },
+        {
+          "Event ID": "TH27-027",
+          "ระยะ / Category": "Fun Run",
+          "วันแข่งจริง": "2027-02-21",
+          "เวลา Start (ICT)": "",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "590",
+          "ชนิดราคา / เงื่อนไข": "ราคาปกติ",
+          "URL อ้างอิง": "https://www.runlah.com/th/ttm2027",
+          "หมายเหตุ": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://www.runlah.com/th/ttm2027",
+          "source_name": "Registration platform",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    },
+    {
+      "id": "TH27-028",
+      "race": {
+        "Event ID": "TH27-028",
+        "Event / งานวิ่ง": "Laguna Phuket Marathon 2027",
+        "Event start": "2027-06-12",
+        "Event end": "2027-06-13",
+        "First race date": "2027-06-12",
+        "จังหวัด": "ภูเก็ต",
+        "จุดจัดงาน / Venue": "Laguna Grove, Laguna Phuket",
+        "ประเภท": "Road",
+        "ระยะ (กม.)": "2, 5, 10, 21.0975, 42.195",
+        "สถานะรับสมัคร*": "มีลิงก์สมัคร",
+        "วันสิ้นสุดรับสมัคร**": "2027-06-12",
+        "ผู้จัด": "",
+        "ชนิดแหล่งข้อมูล": "Official organizer",
+        "URL แหล่งอ้างอิง": "https://phuketmarathon.com/race-information/",
+        "URL สมัคร": "https://phuketmarathon.com/registration/",
+        "ตรวจข้อมูลล่าสุด": "2026-10-25",
+        "ระดับการตรวจสอบ": "เว็บทางการ",
+        "หมายเหตุ": "12 มิ.ย. 2K/5K/10K; 13 มิ.ย. Half/Full; ราคาเปลี่ยนตามช่วงและสัญชาติ"
+      },
+      "categories": [
+        {
+          "Event ID": "TH27-028",
+          "ระยะ / Category": "Junior Run",
+          "วันแข่งจริง": "2027-06-12",
+          "เวลา Start (ICT)": "16:00",
+          "ระยะทาง (กม.)": "2",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "400",
+          "ชนิดราคา / เงื่อนไข": "คนไทย Early Bird 1 ต.ค. 2569 - 15 ก.พ. 2570",
+          "URL อ้างอิง": "https://phuketmarathon.com/registration/",
+          "หมายเหตุ": "เวลาปล่อยตัวจากเว็บ Race Information"
+        },
+        {
+          "Event ID": "TH27-028",
+          "ระยะ / Category": "10K",
+          "วันแข่งจริง": "2027-06-12",
+          "เวลา Start (ICT)": "17:00",
+          "ระยะทาง (กม.)": "10",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "700",
+          "ชนิดราคา / เงื่อนไข": "คนไทย Early Bird 1 ต.ค. 2569 - 15 ก.พ. 2570",
+          "URL อ้างอิง": "https://phuketmarathon.com/registration/",
+          "หมายเหตุ": "เวลาปล่อยตัวจากเว็บ Race Information"
+        },
+        {
+          "Event ID": "TH27-028",
+          "ระยะ / Category": "5K",
+          "วันแข่งจริง": "2027-06-12",
+          "เวลา Start (ICT)": "17:25",
+          "ระยะทาง (กม.)": "5",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "550",
+          "ชนิดราคา / เงื่อนไข": "คนไทย Early Bird 1 ต.ค. 2569 - 15 ก.พ. 2570",
+          "URL อ้างอิง": "https://phuketmarathon.com/registration/",
+          "หมายเหตุ": "เวลาปล่อยตัวจากเว็บ Race Information"
+        },
+        {
+          "Event ID": "TH27-028",
+          "ระยะ / Category": "Marathon",
+          "วันแข่งจริง": "2027-06-13",
+          "เวลา Start (ICT)": "03:00",
+          "ระยะทาง (กม.)": "42.195",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1300",
+          "ชนิดราคา / เงื่อนไข": "คนไทย Early Bird 1 ต.ค. 2569 - 15 ก.พ. 2570",
+          "URL อ้างอิง": "https://phuketmarathon.com/registration/",
+          "หมายเหตุ": "เวลาปล่อยตัวจากเว็บ Race Information"
+        },
+        {
+          "Event ID": "TH27-028",
+          "ระยะ / Category": "Half Marathon",
+          "วันแข่งจริง": "2027-06-13",
+          "เวลา Start (ICT)": "04:30",
+          "ระยะทาง (กม.)": "21.0975",
+          "Elevation gain (เมตร)": "",
+          "Cutoff (ชม.)": "",
+          "ค่าสมัคร (บาท)*": "1050",
+          "ชนิดราคา / เงื่อนไข": "คนไทย Early Bird 1 ต.ค. 2569 - 15 ก.พ. 2570",
+          "URL อ้างอิง": "https://phuketmarathon.com/registration/",
+          "หมายเหตุ": "เวลาปล่อยตัวจากเว็บ Race Information"
+        }
+      ],
+      "provenance": [
+        {
+          "source_url": "https://phuketmarathon.com/race-information/",
+          "source_name": "Official organizer",
+          "first_seen": "2026-10-25",
+          "last_seen": "2026-10-25",
+          "data_origin": "initial_curated_seed"
+        }
+      ],
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "last_verified_at": "2026-10-25",
+      "status": "seed"
+    }
+  ]
+}
