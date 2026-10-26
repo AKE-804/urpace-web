@@ -185,4 +185,44 @@ class RunlahCalendarAndVisibilityTests(unittest.TestCase):
    self.assertEqual(len(synthetic['events']),3)
 
 
+
+
+class PastRaceFilterTests(unittest.TestCase):
+ def test_single_day_and_long_series_are_past(self):
+  from sync_races import race_is_past
+  cutoff='2026-10-26'
+  self.assertTrue(race_is_past({'First race date':'2026-10-20','Event end':'2026-10-20'},cutoff))
+  self.assertTrue(race_is_past({'First race date':'2026-06-06','Event end':'2026-11-08'},cutoff))
+  self.assertFalse(race_is_past({'First race date':'2026-11-01','Event end':'2026-11-01'},cutoff))
+  self.assertFalse(race_is_past({'First race date':'2026-10-25','Event end':'2026-10-27'},cutoff))
+  self.assertTrue(race_is_past({'First race date':'2026-10-25','Event end':'2026-10-25'},cutoff))
+
+ def test_archived_can_be_shown_with_checkbox(self):
+  from sync_races import write_site
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);(root/'data').mkdir()
+   shutil.copy(BASE/'index.html',root/'index.html')
+   template=copy.deepcopy(read_json(BASE/'data'/'race_store.json')['events'][0])
+   def make_event(code,start,end):
+    x=copy.deepcopy(template);x['id']=code
+    x['race']['Event ID']=code
+    x['race']['Event start']=start;x['race']['First race date']=start;x['race']['Event end']=end
+    x['categories']=[]
+    return x
+   rows=[make_event('past','2026-10-21','2026-10-21'),
+         make_event('ongoing','2026-10-25','2026-10-27'),
+         make_event('future','2026-11-01','2026-11-01')]
+   write_site({'events':rows},{'sync_date':'2026-10-26','source_results':[]},[],root)
+   data=read_json(root/'data'/'site_payload.json')
+   self.assertEqual({r['Event ID'] for r in data['races']},{'ongoing','future'})
+   self.assertEqual([r['Event ID'] for r in data['archived_races']],['past'])
+   page=(root/'index.html').read_text()
+   self.assertIn('const R=[...DATA.races,...(DATA.archived_races||[])].map(',page)
+   self.assertIn("p||!raceHasEnded(r)",page)
+   self.assertIn('function raceHasEnded(r){',page)
+   self.assertIn('RUNQUEST_SYNC_META.sync_date',page)
+   # Confirm regeneration doesn't duplicate frontend helpers.
+   write_site({'events':rows},{'sync_date':'2026-10-26','source_results':[]},[],root)
+   self.assertEqual((root/'index.html').read_text().count('function raceHasEnded(r){'),1)
+
 if __name__=='__main__':unittest.main()
