@@ -389,6 +389,57 @@ def make_categories(new,event_id):
            'ระยะทาง (กม.)':'%g'%km,'Elevation gain (เมตร)':'','Cutoff (ชม.)':'','ค่าสมัคร (บาท)*':'',
            'ชนิดราคา / เงื่อนไข':'','URL อ้างอิง':new['url'],'หมายเหตุ':''} for km in new['distances']]
 
+
+def collapse_duplicate_runlah_imports(store):
+    """Merge duplicate auto-imported editions from the same RUNLAH race URL.
+
+    Preserve the earliest public ID, provenance and categories. Never merge
+    manual/curated records, different-year editions, or unrelated race titles.
+    """
+    groups={}
+    for rec in store['events']:
+        if rec.get('status')!='auto_unverified':continue
+        for origin in rec.get('provenance',[]):
+            if origin.get('source_id')=='source-001':
+                key=canonical_url(origin.get('source_url'))
+                if key:groups.setdefault(key,[]).append(rec)
+                break
+    removed=set()
+    for url,recs in groups.items():
+        if len(recs)<2:continue
+        first=recs[0]
+        race=first['race']
+        names=[norm(rec['race'].get('Event / งานวิ่ง')) for rec in recs]
+        ends={rec['race'].get('Event end') for rec in recs}
+        starts=[rec['race'].get('Event start') for rec in recs]
+        if (len(ends)!=1 or not ends.pop() or
+            any(not n or not (n.startswith(names[0]) or names[0].startswith(n)) for n in names)):
+            continue
+        try:
+            days=[dt.date.fromisoformat(x) for x in starts]
+            if len({x.year for x in days})!=1 or (max(days)-min(days)).days>4:continue
+        except (ValueError,TypeError):continue
+        best=min(recs,key=lambda rec:len(norm(rec['race'].get('Event / งานวิ่ง'))))
+        race['Event / งานวิ่ง']=best['race']['Event / งานวิ่ง']
+        race['Event start']=min(starts)
+        race['First race date']=min(starts)
+        all_provenance={canonical_url(p.get('source_url')):p for p in first.get('provenance',[]) if p.get('source_url')}
+        for duplicate in recs[1:]:
+            removed.add(id(duplicate))
+            for p in duplicate.get('provenance',[]):
+                k=canonical_url(p.get('source_url'))
+                if k and k not in all_provenance:all_provenance[k]=p
+            for cat in duplicate.get('categories',[]):
+                if not any(str(c.get('ระยะทาง (กม.)'))==str(cat.get('ระยะทาง (กม.)')) for c in first.get('categories',[])):
+                    cat=cat.copy()
+                    cat['Event ID']=first['id']
+                    first.setdefault('categories',[]).append(cat)
+        first['provenance']=list(all_provenance.values())
+    if removed:
+        store['events']=[rec for rec in store['events'] if id(rec) not in removed]
+    return len(removed)
+
+
 def merge(store,discovered,now):
     """Returns counters/review queue. Keep known dates/organizer links immutable automatically."""
     review=[];stats={'added':0,'updated':0,'unchanged':0,'review_count':0}
@@ -567,12 +618,14 @@ def run(root=BASE,fixture_dir=None,only=None,no_network=False):
             'count':len(events),'future_count':len(future),
             'pages_checked':successful_pages,'pages_requested':len(urls),
             'note':'; '.join(reports)[:650]})
+    duplicates_collapsed=collapse_duplicate_runlah_imports(store)
     counters,review=merge(store,found,now)
     status['sync_date']=now
     status.update({'last_attempt':stamp,'mode':'fixture_test' if fixture_dir else ('offline' if no_network else 'scheduled'),
                    'source_count':len(sources),'source_results':results,
                    'sources_with_events':sum(x['state']=='ok' for x in results),
                    'events_parsed':len(found),'future_events_parsed':sum(x.get('future_count',0) for x in results),
+                   'duplicate_rows_collapsed':duplicates_collapsed,
                    **counters})
     # Success requires at least one *future* event actually parsed from live HTML.
     # HTTP 200 / empty event pages must not count as successful race updates.
