@@ -405,7 +405,7 @@ def merge(store,discovered,now):
             # Only clean importer-owned records, never rename a curated event.
             oldr=exact['race']
             imported=exact.get('status')=='auto_unverified'
-            same_origin=canonical_url(new['url']) in known_urls
+            same_origin=any(canonical_url(p.get('source_url'))==canonical_url(new['url']) for p in exact.get('provenance',[]))
             old_name=oldr.get('Event / งานวิ่ง','')
             if imported and same_origin and norm(old_name).startswith(norm(new['name'])) and old_name!=new['name']:
                 oldr['Event / งานวิ่ง']=new['name'];stats['updated']+=1
