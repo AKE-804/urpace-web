@@ -314,7 +314,11 @@ def fetch(session,source,fixture_dir=None):
         # iter_content() has already consumed the streamed body; accessing
         # res.apparent_encoding here would read res.content again and crash.
         # requests determines res.encoding from the HTTP charset when present.
-        encoding=res.encoding or 'utf-8'
+        # requests may default HTML with no declared charset to ISO-8859-1.
+        # RUNLAH uses UTF-8 Thai text; decoding as Latin-1 destroys date parsing.
+        mime=res.headers.get('Content-Type','')
+        charset=re.search(r'charset=[\\\"\\\']?([A-Za-z0-9._-]+)',mime,re.I)
+        encoding=charset.group(1) if charset else 'utf-8'
         try:return blob.decode(encoding,errors='replace'),'HTTP 200'
         except LookupError:return blob.decode('utf-8',errors='replace'),'HTTP 200'
     except requests.RequestException as exc:return None,f'fetch error: {type(exc).__name__}'
