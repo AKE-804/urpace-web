@@ -503,13 +503,59 @@ def merge(store,discovered,now):
     return stats,review
 
 
+def race_is_past(race, cutoff):
+    """Race occurrence is past on the Bangkok sync date, not arbitrary category dates.
+
+    A normal multiday event may still be under way for up to seven days.
+    Longer date ranges (season/virtual-series listings) use the first race
+    date as the occurrence and do not remain 'upcoming' for months.
+    """
+    start=str(race.get('First race date') or race.get('Event start') or race.get('Event end') or '')[:10]
+    end=str(race.get('Event end') or start)[:10]
+    if not start:return True
+    if start >= cutoff:return False
+    try:
+        days=(dt.date.fromisoformat(end)-dt.date.fromisoformat(start)).days
+        return not (0<=days<=7 and end>=cutoff)
+    except ValueError:return True
+
+
+def patch_filter_ui(html):
+    """Small, idempotent correction of race filtering in the existing SPA."""
+    patches=[
+      ("const R=DATA.races.map(", "const R=[...DATA.races,...(DATA.archived_races||[])].map("),
+      ("const C=DATA.categories.map(", "const C=[...DATA.categories,...(DATA.archived_categories||[])].map("),
+      ("const today=()=>new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Bangkok'});",
+       """const today=()=>{const v=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Bangkok',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(p=>[p.type,p.value]));const local=v.year+'-'+v.month+'-'+v.day;return RUNQUEST_SYNC_META.sync_date&&RUNQUEST_SYNC_META.sync_date>local?RUNQUEST_SYNC_META.sync_date:local;};"""),
+      ("(p||[r.end,r.first,...cs.map(x=>x.date)].some(x=>x&&x>=today()))",
+       "(p||!raceHasEnded(r))"),
+      ("['TH26-008','TH26-009','TH26-014','TH27-028'].map(id=>card(R.find(r=>r.id===id))).join('')",
+       "R.filter(r=>!raceHasEnded(r)).sort((a,b)=>nextDate(a).localeCompare(nextDate(b))).slice(0,4).map(card).join('')"),
+      ("R.length+'</strong>RACES IN INDEX", "R.filter(r=>!raceHasEnded(r)).length+'</strong>UPCOMING RACES"),
+    ]
+    for old,new in patches:
+        if old in html:
+            html=html.replace(old,new,1)
+        elif new not in html:
+            raise RuntimeError('Frontend filter patch target is missing: '+old[:80])
+    helper="""function raceHasEnded(r){const d=today(),start=(r.first||r.start||r.end||'').slice(0,10),end=(r.end||start).slice(0,10);if(!start)return true;if(start>=d)return false;const span=(Date.parse(end+'T12:00:00Z')-Date.parse(start+'T12:00:00Z'))/86400000;return !(span>=0&&span<=7&&end>=d);}\n"""
+    if "function raceHasEnded(r){" not in html:
+        anchor="function filter(){"
+        if anchor not in html:raise RuntimeError('Frontend filter() missing')
+        html=html.replace(anchor,helper+anchor,1)
+    return html
+
+
 def write_site(store,status,sources,root=BASE):
     cutoff=status.get('sync_date') or dt.datetime.now(dt.timezone(dt.timedelta(hours=7))).date().isoformat()
     # Public calendar excludes completed races. Keep all history in race_store.json.
-    visible=[x for x in store['events'] if str(x['race'].get('Event end') or x['race'].get('First race date') or x['race'].get('Event start') or '')[:10]>=cutoff]
+    visible=[x for x in store['events'] if not race_is_past(x['race'],cutoff)]
+    archived=[x for x in store['events'] if race_is_past(x['race'],cutoff)]
     races=[x['race'] for x in visible]
     cats=[c for x in visible for c in x['categories']]
-    payload={'races':races,'categories':cats}
+    payload={'races':races,'categories':cats,
+             'archived_races':[x['race'] for x in archived],
+             'archived_categories':[c for x in archived for c in x['categories']]}
     dump_json(root/'data'/'site_payload.json',payload)
     s=(root/'index.html').read_text(encoding='utf-8')
     # Only update the designated data assignment, retaining all generator logic and inline fonts.
@@ -518,7 +564,7 @@ def write_site(store,status,sources,root=BASE):
     patched,n=re.subn(pattern,lambda _:repl,s,count=1,flags=re.S)
     if n!=1:raise RuntimeError('site DATA assignment not found; aborting site update')
     # Embedded sync metadata controls visible status; always display last successful run explicitly.
-    sync_blob='const RUNQUEST_SYNC_META='+json.dumps({'last_attempt':status.get('last_attempt'),
+    sync_blob='const RUNQUEST_SYNC_META='+json.dumps({'sync_date':status.get('sync_date'),'last_attempt':status.get('last_attempt'),
         'last_success':status.get('last_success'),'source_count':len(sources),
         'scanned':sum(1 for x in status.get('source_results',[]) if x.get('state')=='ok'),
         'source_results':status.get('source_results',[]),'review_count':status.get('review_count',0),
@@ -534,6 +580,7 @@ def write_site(store,status,sources,root=BASE):
         ensure_ascii=False,separators=(',',':')).replace('</','<\\/')+';'
     patched,n=re.subn(r'const RUNQUEST_SOURCES=\[.*?\];',lambda _:src_blob,patched,count=1,flags=re.S)
     if n!=1:raise RuntimeError('RUNQUEST_SOURCES assignment not found')
+    patched=patch_filter_ui(patched)
     (root/'index.html').write_text(patched,encoding='utf-8')
     return len(races),len(cats)
 
@@ -636,7 +683,7 @@ def run(root=BASE,fixture_dir=None,only=None,no_network=False):
     dump_json(root/'data'/'sync_status.json',status)
     dump_json(root/'data'/'review_queue.json',review)
     counts=write_site(store,status,sources,root)
-    upcoming=[e for e in store['events'] if (e['race'].get('Event end') or e['race'].get('Event start') or '')>=now]
+    upcoming=[e for e in store['events'] if not race_is_past(e['race'],now)]
     live_sources={src['id'] for src in results if src.get('future_count',0)>0} if not fixture_dir and not no_network else set()
     # 60 events / 2 live feeds are release *policy*, not evidence of full coverage.
     # Offline and fixture runs can never mark a release ready.
