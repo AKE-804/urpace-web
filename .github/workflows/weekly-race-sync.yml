@@ -5,6 +5,15 @@ on:
     # Every Monday at 09:15 Thailand time (UTC+7); GitHub may delay scheduled runs.
     - cron: '15 2 * * 1'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'data/sources.json'
+      - 'index.html'
+      - 'requirements.txt'
+      - '.github/workflows/weekly-race-sync.yml'
 
 permissions:
   contents: write
