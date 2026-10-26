@@ -1,7 +1,7 @@
 {
-  "last_attempt": "2026-10-26T08:51:19+00:00",
-  "last_success": null,
-  "mode": "offline",
+  "last_attempt": "2026-10-26T09:24:46+00:00",
+  "last_success": "2026-10-26T09:24:46+00:00",
+  "mode": "scheduled",
   "notes": "Original 28 curated races from 2026-10-25; 67 sources registered, no live fetch completed by this release.",
   "source_count": 67,
   "auto_candidate_count": 60,
@@ -9,23 +9,25 @@
     {
       "id": "source-001",
       "name": "RUNLAH",
-      "state": "not_checked",
+      "state": "empty",
       "count": 0,
-      "note": "offline mode"
+      "future_count": 0,
+      "note": "No validated events found"
     },
     {
       "id": "source-002",
       "name": "Jog & Joy Calendar",
-      "state": "not_checked",
+      "state": "skipped",
       "count": 0,
-      "note": "offline mode"
+      "note": "page exceeds size limit"
     },
     {
       "id": "source-003",
       "name": "PatRunning",
-      "state": "not_checked",
-      "count": 0,
-      "note": "offline mode"
+      "state": "ok",
+      "count": 26,
+      "future_count": 23,
+      "note": "HTTP 200"
     },
     {
       "id": "source-004",
@@ -476,18 +478,18 @@
       "note": "js_app"
     }
   ],
-  "added": 0,
+  "added": 26,
   "updated": 0,
   "unchanged": 0,
   "review_count": 0,
-  "sources_with_events": 0,
-  "events_parsed": 0,
-  "future_events_parsed": 0,
+  "sources_with_events": 1,
+  "events_parsed": 26,
+  "future_events_parsed": 23,
   "beta_gate": {
     "ready": false,
-    "upcoming_events": 28,
+    "upcoming_events": 54,
     "min_upcoming_events": 60,
-    "live_sources_this_run": 0,
+    "live_sources_this_run": 1,
     "min_live_sources": 2,
     "rule": "UR.PACE beta release gate; not a guarantee of completeness"
   }
