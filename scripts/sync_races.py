@@ -474,6 +474,25 @@ def run(root=BASE,fixture_dir=None,only=None,no_network=False):
             else:
                 try:
                     events=extract(html,page_source)
+                    if source['method']=='runlah' and not events:
+                        diag_soup=BeautifulSoup(html,'html.parser')
+                        anchors=diag_soup.find_all('a',href=True)
+                        examples=[]
+                        for a_tag in anchors:
+                            h=urlparse(safe_external(a_tag.get('href',''),target_url)).path
+                            if h.startswith('/th/') or h.startswith('/en/'):
+                                examples.append({'path':h[:75],
+                                  'text':a_tag.get_text(' ',strip=True)[:65],
+                                  'parent_tag':a_tag.parent.name if a_tag.parent else '',
+                                  'has_date':bool(runlah_event_dates(a_tag.get_text(' ',strip=True))[0])})
+                            if len(examples)>=8:break
+                        print('RUNLAH_PARSER_DIAG '+json.dumps({
+                          'page':target_url,'bytes':len(html),'anchor_count':len(anchors),
+                          'page_title':diag_soup.title.get_text(' ',strip=True)[:80] if diag_soup.title else '',
+                          'script_tags':len(diag_soup.find_all('script')),
+                          'next_data':'__NEXT_DATA__' in html,'nuxt_data':'__NUXT__' in html,
+                          'body_text_prefix':diag_soup.get_text(' ',strip=True)[:130],
+                          'examples':examples},ensure_ascii=False))
                     successful_pages+=1
                     all_events.extend(events)
                     reports.append(f"{target_url}: {len(events)} events")
