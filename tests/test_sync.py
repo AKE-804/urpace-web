@@ -72,7 +72,7 @@ class IntegrationTests(unittest.TestCase):
     shutil.copy(BASE/'data'/n,root/'data'/n)
    shutil.copy(BASE/'index.html',root/'index.html')
    s=run(root,FIX,{'source-001','source-002','source-003'})
-   self.assertIsNone(s['last_success'])
+   self.assertEqual(s['last_success'],read_json(BASE/'data'/'sync_status.json')['last_success'])
    r=read_json(root/'data'/'site_payload.json');self.assertEqual(len(r['races']),31)
    self.assertIn('RUN QUEST FIXTURE', (root/'index.html').read_text())
    s2=run(root,FIX,{'source-001','source-002','source-003'})
@@ -84,7 +84,7 @@ class IntegrationTests(unittest.TestCase):
     shutil.copy(BASE/'data'/n,root/'data'/n)
    shutil.copy(BASE/'index.html',root/'index.html')
    s=run(root,no_network=True,only={'source-001'})
-   self.assertIsNone(s['last_success'])
+   self.assertEqual(s['last_success'],read_json(BASE/'data'/'sync_status.json')['last_success'])
 
 
 class BetaHardeningTests(unittest.TestCase):
