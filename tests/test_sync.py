@@ -112,4 +112,51 @@ class BetaHardeningTests(unittest.TestCase):
   a,_=merge(store,ev,'2026-10-26');b,_=merge(store,ev,'2026-10-27')
   self.assertEqual(a['added'],1);self.assertEqual(b['added'],0)
 
+
+class RunlahCalendarAndVisibilityTests(unittest.TestCase):
+ def test_calendar_card_with_date_inside_link(self):
+  html='<a href="/th/exrun2026">EXRUN 2026 Run for Education 22 พฤศจิกายน 2569 กรุงเทพมหานคร</a>'
+  found=parse_runlah(html,SRC['source-001'])
+  self.assertEqual(len(found),1)
+  self.assertEqual(found[0]['name'],'EXRUN 2026 Run for Education')
+  self.assertEqual(found[0]['date'],'2026-11-22')
+  self.assertEqual(found[0]['province'],'กรุงเทพมหานคร')
+
+ def test_calendar_date_near_link(self):
+  html='<div><a href="/th/khundan2027">ขุนด่าน เทรล 2027</a><span>14 กุมภาพันธ์ 2570 จ.นครนายก</span></div>'
+  found=parse_runlah(html,SRC['source-001'])
+  self.assertEqual(len(found),1)
+  self.assertEqual(found[0]['date'],'2027-02-14')
+
+ def test_multiday_card_uses_first_and_last_race_dates(self):
+  html='<a href="/th/lampang26">LAMPANG MYSSTIC TRAIL 2026 13-15 พฤศจิกายน 2569 ลำปาง</a>'
+  found=parse_runlah(html,SRC['source-001'])
+  self.assertEqual(len(found),1)
+  self.assertEqual(found[0]['date'],'2026-11-13')
+  self.assertEqual(found[0]['end'],'2026-11-15')
+
+ def test_only_future_and_ongoing_races_are_public(self):
+  from sync_races import write_site
+  with tempfile.TemporaryDirectory() as t:
+   root=Path(t);(root/'data').mkdir()
+   shutil.copy(BASE/'index.html',root/'index.html')
+   store=copy.deepcopy(read_json(BASE/'data'/'race_store.json'))
+   examples=copy.deepcopy(store['events'][0])
+   examples['id']='test-past';examples['race']['Event ID']='test-past'
+   examples['race']['Event start']='2026-10-20';examples['race']['Event end']='2026-10-24'
+   examples['categories']=[]
+   ongoing=copy.deepcopy(examples)
+   ongoing['id']='test-ongoing';ongoing['race']['Event ID']='test-ongoing'
+   ongoing['race']['Event start']='2026-10-25';ongoing['race']['Event end']='2026-10-27'
+   future=copy.deepcopy(examples)
+   future['id']='test-future';future['race']['Event ID']='test-future'
+   future['race']['Event start']='2026-11-12';future['race']['Event end']='2026-11-12'
+   synthetic={'events':[examples,ongoing,future]}
+   status={'sync_date':'2026-10-26','source_results':[]}
+   write_site(synthetic,status,[],root)
+   public=read_json(root/'data'/'site_payload.json')
+   self.assertEqual([r['Event ID'] for r in public['races']],['test-ongoing','test-future'])
+   self.assertEqual(len(synthetic['events']),3)
+
+
 if __name__=='__main__':unittest.main()
