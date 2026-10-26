@@ -282,8 +282,12 @@ def fetch(session,source,fixture_dir=None):
         for chunk in res.iter_content(chunk_size=32768):
             blob+=chunk
             if len(blob)>MAX_BODY:return None,'page exceeds size limit'
-        res.encoding=res.apparent_encoding or res.encoding or 'utf-8'
-        return blob.decode(res.encoding,errors='replace'),'HTTP 200'
+        # iter_content() has already consumed the streamed body; accessing
+        # res.apparent_encoding here would read res.content again and crash.
+        # requests determines res.encoding from the HTTP charset when present.
+        encoding=res.encoding or 'utf-8'
+        try:return blob.decode(encoding,errors='replace'),'HTTP 200'
+        except LookupError:return blob.decode('utf-8',errors='replace'),'HTTP 200'
     except requests.RequestException as exc:return None,f'fetch error: {type(exc).__name__}'
 
 
