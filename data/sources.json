@@ -2,13 +2,20 @@
   {
     "id": "source-001",
     "name": "RUNLAH",
-    "url": "https://www.runlah.com/th",
+    "url": "https://www.runlah.com/th/calendar/type/funrun",
     "priority": "A",
     "kind": "รวมงาน+สมัคร",
     "method": "runlah",
     "enabled": true,
     "permission": "review_before_production",
-    "notes": "standard events + editions + race distances"
+    "notes": "RUNLAH public type calendars; six bounded pages per weekly sync, minimal facts + source URLs, respect robots.txt and terms",
+    "additional_urls": [
+      "https://www.runlah.com/th/calendar/type/mini",
+      "https://www.runlah.com/th/calendar/type/half",
+      "https://www.runlah.com/th/calendar/type/full",
+      "https://www.runlah.com/th/calendar/type/trail",
+      "https://www.runlah.com/th/calendar/type/ultra"
+    ]
   },
   {
     "id": "source-002",
